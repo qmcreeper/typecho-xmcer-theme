@@ -1,0 +1,157 @@
+﻿/*
+ *xmcer制作，大量参考网络资源，仅供学习或个人使用
+ */
+
+/*style*/
+*{background:#fcfcfc}
+
+html,body {
+    height:100%;
+    width: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+}
+body {
+  position: relative;
+  background: #fcfcfc;
+  font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif;
+  font-weight: normal;
+  line-height: 1.6;
+  font-size: 1.6rem;
+}
+* { margin:0; padding:0;}
+ul, li { list-style:none;}
+a { text-decoration:none;}
+br{ display:inline; line-height:35px;} 
+
+
+
+
+/*-----class-----*/
+/*draw*/
+.button {
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 14px/100% Arial, Helvetica, sans-serif;
+	padding: .5em 2em .55em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-border-radius: .5em; 
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+.button:hover {
+	text-decoration: none;
+}
+.button:active {
+	position: relative;
+	top: 1px;
+}
+
+/*header*/
+.header{
+    position: fixed;
+    top:0;
+    right: 0;
+    left: 0;
+    min-height:45px;
+    display: block;
+    padding: 6px 20px;
+    font-size: 1.2rem;
+    background-color: #f6f6f6;
+}
+.nav-x { border:1px  #f6f6f6; border-right:none; overflow:hidden; float:left; background-color: #f6f6f6;}
+.nav-x ul li { float:left;}
+.nav-x ul li a, .h-r h2 a{ width:120px; height:30px; text-align:center; line-height:40px; display:block;  background:#f6f6f6; color:#666; font-size: 12pt}
+.nav-x ul li a:hover{ color:#fac; }
+.nav-x ul li ul { position:absolute;display:none;}
+.nav-x ul li ul li { float:none;}
+.nav-x ul li ul li a { height:40px; border-right:none; background:#f6f6f6;}
+.nav-x ul li:hover ul{ display:block}
+
+.h-r { border:1px  #f6f6f6; border-right:none; overflow:hidden; float:right;}
+
+/*container*/
+.container {
+    margin-top:65px;
+    min-height:95%;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color:#fefefe;
+}
+
+/*main*/
+/*post*/
+.main{
+    margin-left: 6%;
+    margin-right: 6%;
+    height:100%;
+    background:#fdffff;
+}
+.mmp{margin-left: 9%;margin-right: 9%;min-height:233px;}
+.mmp-p {height:100%;border-bottom: 1px solid #ddd;}
+.mmp-p h2,.mmp-p h2 a{text-align:center;color:#444;}
+.mmp-p ul{margin-left: 12%;}
+.mmp-p ul li{float:left;margin-right:15px;color:#666;}
+.mmp-p ul li a:hover{ color:#aaa; }
+.mmp-p ul li a{ color:#233aaa; }
+.mmp-p-c {margin-left: 12%;margin-right:12%;color:#233;} 
+
+.mmp,.mmp-p,.mmp-p p,.mmp-p h2,.mmp-p h2 a,.mmp-p ul,.mmp-p ul li,.mmp-p ul li time,.mmp-p ul li a,.mmp-p-c p{background:#feffff;}
+
+/*comment*/
+/*参考https://www.lvtao.net/dev/667.html/comment-page-1*/
+/*comment-list*/
+.comment-list{margin:0;list-style:none; padding: 5px 0}
+ol.comment-list li{ margin: 10px 0;padding: 10px 10px 5px;border:1px solid #e3e3e3;background-color:#FAFAFA;-moz-border-radius:5px; -webkit-border-radius:5px;}
+ol.comment-list li.comment-odd{background-color: #F4F9FF; border-color: #D0DDF6; }
+ol.comment-list li.comment-even{background-color:#fff; border-color: #E3E3E3;}
+ol.comment-list li.comment-by-author{border-color: #b8cdf6;}
+ol.comment-list li.comment-by-user {}
+ol.comment-list li .comment-reply{float: right; margin-top: -3px;}
+ol.comment-list li .comment-reply a{font-size:12px;border:none;color:#aaa;}
+ol.comment-list li .comment-reply a:hover{color:#444;}
+.comment-body{overflow:hidden;}
+.comment-body p{ margin: 5px 0}
+.comment-author{border-bottom: 1px solid #ECECEC;height: 36px;padding-bottom: 5px;width: 100%;}
+ol.comment-list li.comment-odd .comment-author { border-bottom-color:#D0DDEE}
+.avatar{float:left;border:1px solid #E3E3E3; padding: 2px; background-color: #fff;}
+.comment-info {color: #888;float: left;line-height: 16px;padding-left: 5px;}
+.comment-info .fn{font-style:normal; display: block; margin-top: 4px}
+.comment-info .comment-meta{color:#999;font-size:10px;}
+
+.com,.com h3,ol.comment-list,ol.comment-list li,.comment-reply,.comment-reply a,.comment-author,.comment-author cite,.comment-author cite a,.comment-meta,.comment-meta a,.comment-meta a time,.comment-content,.comment-content p{background-color:transparent;}
+
+/*respond*/
+.respond form p label{top:0;display: block;margin-bottom:3px;}
+.respond form p textarea{left:0;min-width:63.5%;font-size:2.33rem}
+.respond,.respond form,.respond form p,.respond form p a,.respond form p label{background-color:transparent;}
+
+.com h3 .respond h3{margin-top:10px}
+
+/*post-near*/
+.post-near{margin-top:7px;margin-bottom:7px}
+.post-near,.post-near li,.post-near li a{margin-top:10px;background-color:transparent;}
+
+/*footer*/
+.footer{ 
+    margin-top:10px;
+    height:8%;
+    right: 0;
+    left: 0;
+	margin-top:66px;
+    bottom: 0;   
+    background: #fcfcfc;   
+}
+.f-container{text-align:center;background: #fcfcfc;color:#666;}
